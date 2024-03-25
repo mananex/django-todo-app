@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/global_styles.css'%}">
+    <link rel="stylesheet" href="{% static 'main/css/app.css' %}">
+    <title>ToDo</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="modals">
+        <div class="modal">
+            <form action="#" method="post" class="modal__form"> <!--http://127.0.0.1:8000/add_task/ -->
+                <div class="modal__form__field">
+                    <label for="taskname" class="text">Task name</label>
+                    <input type="text" class="text value__input" placeholder="My Task!" name="taskname">
+                </div>
+                <div class="modal__form__field">
+                    <label for="taskshortdescription" class="text">Short description</label>
+                    <input type="text" class="text value__input" placeholder="Some short description?" name="shortdescription">
+                </div>
+                <div class="modal__form__field">
+                    <label for="taskdescription" class="text">Full description</label>
+                    <textarea name="textarea" class="text value__input" cols="30" rows="10" placeholder="Describe it!" name="description"></textarea>
+                </div>
+            </form>
+            <div class="modal__footer">
+                <input type="submit" class="modal__footer__button link__button text modal__footer__button_submit" value="Do it!">
+                <button class="modal__footer__button link__button text modal__footer__button_close">Close</button>
+            </div>
+        </div>
+    </div>
+    <section class="app">
+        <div class="wrapper">
+            <div class="app__task__list">
+                <div class="app__task__list__title text">Task List</div>
+                <div class="scrollable">
+                    <div href="#" class="app__task__list-task text app__task__list-task_load__more">Load more</div>
+                </div>
+            </div>
+            <div class="app__interaction__tab">
+                <div class="app__interaction__tab__header">
+                    <a id="delete__task__button" href="#" class="link__button app__interaction__tab__header-button delete__task__button">Complete task</a>
+                    <a id="add__task__button" href="#" class="link__button app__interaction__tab__header-button add__task__button">Add a new task</a>
+                </div>
+                <div class="app__interaction__tab__info">
+                    <div class="app__interaction__tab__info__title text"><span>Hmmm</span>...</div>
+                    <div class="app__interaction__tab__info__short__description text"><span>Short description:</span> I didn't find anything...</div>
+                    <div class="app__interaction__tab__info__description text"><span>Description:</span> It seems you haven't selected any task yet. Anyway, you can load them by clicking on "Load more", or create a new one!</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="{% static 'main/scripts/jquery.min.js' %}"></script>
+    <script src="{% static 'main/scripts/app.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: none;
+  flex-direction: row;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  z-index: 10000;
+}
+
+.modals {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+}
+.modals .modal {
+  background-color: rgb(26, 25, 25);
+  width: 600px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.modals .modal .label__alert {
+  color: red;
+  transition: color 0.3s;
+}
+
+.modals .modal .label__alert::after {
+  content: " (at least 5 symbols)"
+}
+
+.modals .modal__form {
+  width: 80%;
+  background-color: rgb(20, 20, 20);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.modals .modal__form__field {
+  width: 50%;
+  margin-top: 30px;
+}
+.modals .modal__form__field input, .modals .modal__form__field textarea {
+  width: 80%;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(26, 25, 25);
+  padding: 0 10px;
+  margin-top: 4px;
+  font-size: 16px;
+}
+.modals .modal__form__field input::-moz-placeholder, .modals .modal__form__field textarea::-moz-placeholder {
+  color: rgb(161, 161, 161);
+  font-size: 15px;
+}
+.modals .modal__form__field input::placeholder, .modals .modal__form__field textarea::placeholder {
+  color: rgb(161, 161, 161);
+  font-size: 15px;
+}
+.modals .modal__form__field textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 300px;
+  padding: 10px;
+}
+.modals .modal__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modals .modal__footer__button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+  margin: 20px 20px 0;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 150px;
+}
+.modals .modal__footer__button_submit {
+  background-color: rgb(64, 97, 167);
+}
+.modals .modal__footer__button_submit:hover {
+  background-color: rgb(184, 207, 255);
+}
+
+.app {
+  padding: 0;
+  height: 100vh;
+  position: relative;
+}
+.app__task__list {
+  width: 600px;
+  height: 100%;
+  background-color: rgb(26, 26, 26);
+}
+.app__task__list__title {
+  width: 100%;
+  text-align: center;
+  padding: 24.5px 0;
+  border: 1px solid rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+.app__task__list .scrollable {
+  width: 100%;
+  height: 88%;
+  overflow: auto;
+  margin: auto 0;
+}
+.app__task__list .scrollable::-webkit-scrollbar {
+  background-color: rgb(26, 26, 26);
+}
+.app__task__list .scrollable::-webkit-scrollbar-thumb {
+  background-color: rgb(63, 63, 63);
+  cursor: pointer;
+}
+.app__task__list .scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(44, 44, 44);
+}
+.app__task__list .scrollable::-webkit-scrollbar-track {
+  background-color: rgb(31, 31, 31);
+}
+.app__task__list-task {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  height: 50px;
+  padding-left: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  margin-bottom: 13px;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 17px;
+  cursor: pointer;
+}
+.app__task__list-task:hover {
+  background-color: white;
+  color: black;
+}
+.app__task__list-task_load__more {
+  background-color: white;
+  color: rgb(26, 26, 26);
+}
+.app__task__list-task_load__more:hover {
+  background-color: rgb(87, 87, 87);
+  color: white;
+}
+.app__interaction__tab {
+  width: 100%;
+  height: 100%;
+}
+.app__interaction__tab__header {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.app__interaction__tab__header-button {
+  width: 180px;
+  height: 40px;
+  font-size: 17px;
+  margin: 10px 5px;
+  box-shadow: none;
+}
+.app__interaction__tab__header-button:hover {
+  box-shadow: none;
+}
+.app__interaction__tab__header .add__task__button {
+  background-color: rgb(64, 139, 64);
+}
+.app__interaction__tab__header .add__task__button:hover {
+  background-color: rgb(178, 223, 178);
+}
+.app__interaction__tab__info {
+  width: 80%;
+  height: 80%;
+  background-color: rgb(26, 26, 26);
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 60px 0;
+}
+.app__interaction__tab__info div {
+  width: 100%;
+  height: 80px;
+}
+.app__interaction__tab__info span {
+  background-color: white;
+  color: rgb(26, 26, 26);
+}
+.app__interaction__tab__info__title {
+  font-size: 30px;
+}
+.app__interaction__tab__info__short__description {
+  font-size: 25px;
+}
+.app__interaction__tab__info__description {
+  font-size: 20px;
+}/*# sourceMappingURL=styles.css.map */
