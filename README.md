@@ -9,6 +9,10 @@ Before installing dependences, download and install Python 3.x.x. [from official
 ```
 python -m venv myToDoAppVenv
 cd myToDoAppVenv
-git clone 
+git clone https://github.com/mananex/django-todo-app.git
 ```
-#### 2.
+#### 2. Go into the repository and run the cmd.bat file
+```
+cd django-todo-app
+cmd.bat
+```
