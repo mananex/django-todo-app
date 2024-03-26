@@ -32,3 +32,5 @@ python manage.py collectstatic
 ```
 python manage.py runserver
 ```
+After running the project, you can access the web page at `http://localhost:8000`.
+The path to the admin panel is `/admin`, the path to the API overview page is `/api`.
