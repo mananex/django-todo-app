@@ -16,3 +16,18 @@ git clone https://github.com/mananex/django-todo-app.git
 cd django-todo-app
 cmd.bat
 ```
+The `cmd.bat` file launches a virtual environment and nothing more.
+#### 3. Download Python packages
+```
+pip install -r requirements.txt
+```
+#### 4. Configure the Django project
+```
+python manage.py makemigrations
+python manage.py migrate
+python manage.py collectstatic
+```
+#### 5. Run the server
+```
+python manage.py runserver
+```
