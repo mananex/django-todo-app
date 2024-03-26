@@ -5,6 +5,8 @@ This is my first web application written in the Django framework. The interface 
 ### Installation
 Before installing dependences, download and install Python 3.x.x. [from official site](https://www.python.org/). I'm using `Python 3.11.7`. **Installation instructions will be for Windows OS only**.
 
+Launch command line (cmd) and start executing the following commands.
+
 #### 1. Create a virtual environment, go there and clone this repository.
 ```
 python -m venv myToDoAppVenv
@@ -34,3 +36,5 @@ python manage.py runserver
 ```
 After running the project, you can access the web page at `http://localhost:8000`.
 The path to the admin panel is `/admin`, the path to the API overview page is `/api`.
+
+**Note:** every time you want to run the web application you can just double click `cmd.bat` file and run the `python manage.py runserver` command.
