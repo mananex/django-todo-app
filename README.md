@@ -27,6 +27,7 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py collectstatic
 ```
+**Note:** if you want to access the Django admin panel, you need to create a superuser using `python manage.py createsuperuser` command.
 #### 5. Run the server
 ```
 python manage.py runserver
