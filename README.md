@@ -1,5 +1,7 @@
 # Very simple and minimalistic ToDo web-application
 
+<video src="https://github.com/mananex/django-todo-app/assets/84662402/76a311a7-a1ff-4a5f-b0d8-5a45a3ca2c24" width=180/>
+
 This is my first web application written in the Django framework. The interface is simple. In addition, I used pure HTML, CSS and JS.
 
 ### Installation
